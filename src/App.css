@@ -4,61 +4,71 @@
   padding: 0;
   text-align: center;
 }
-.background{
+
+.background {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
 }
-.left-part{
-  width: 65%;
+
+.left-part {
+  width: 100%;
   padding: 20px;
   text-align: left;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 2vw;
 }
-.temperature{
+
+.temperature {
   font-size: 50px;
   color: #fff;
   margin-bottom: 15px;
 }
-dt{
+
+dt {
   gap: 0;
 }
-.dt h5{
+
+.dt h5 {
   margin: 0;
   color: #fff;
   font-size: 22px;
 }
-.dt p{
+
+.dt p {
   margin: 0 0 10px 0;
   color: #d0d0d0;
   font-size: 15px;
 }
-.weather_desc{
+
+.weather_desc {
   margin-top: 20px;
-  
   align-items: center;
-  
   color: #fff;
 }
-.weather_desc p{
+
+.weather_desc p {
   margin: 0;
   padding: 0;
 }
-.weather_desc img{
+
+.weather_desc img {
   width: 60px;
   height: 60px;
 }
-.right-part{
-  width: 35%;
+
+.right-part {
+  width: 100%;
   padding: 15px;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
-.search_city{
+
+.search_city {
   display: flex;
   margin: 0 auto;
   padding: 0;
@@ -68,7 +78,8 @@ dt{
   width: 85%;
   border-bottom: 1px solid white;
 }
-.search_city input{
+
+.search_city input {
   width: 80%;
   padding: 10px;
   font-size: 15px;
@@ -77,76 +88,181 @@ dt{
   background: transparent;
   color: #fff;
 }
-.search_city svg{
+
+.search_city svg {
   color: #fff;
 }
-.search_city input::placeholder{
+
+.search_city input::placeholder {
   color: #fff;
   opacity: 0.8;
 }
-.search_city input:focus{
+
+.search_city input:focus {
   outline: none;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
-h5{
+
+h5 {
   color: #fff;
   font-size: 30px;
   margin: 0 0 15px 0;
-
   text-align: left;
 }
-.detail{
+
+.detail {
   display: flex;
   flex-direction: column;
-  
 }
-.idetail{
-  color:#fff;
+
+.idetail {
+  color: #fff;
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
 }
-.forecast{
+
+.forecast {
   display: flex;
   flex-direction: column;
   max-height: 450px;
   overflow-y: auto;
   gap: 20px;
 }
+
 .forecast::-webkit-scrollbar {
   width: 8px;
   margin-right: 3px;
 }
+
 .forecast::-webkit-scrollbar-thumb {
   background-color: gray;
   border-radius: 10px;
 }
+
 .forecast::-webkit-scrollbar-track {
   background: #f0f0f2;
-  border-radius: 10px;
+  border-radius: 10px;
 }
-.forecast_item{
+
+.forecast_item {
   background-color: transparent;
   width: 100%;
   border-radius: 10px;
   display: flex;
-  
   text-align: center;
   color: white;
   justify-content: space-between;
-  
 }
-.ford{
+
+.ford {
   display: flex;
 }
-.ftemp{
+
+.ftemp {
   margin-right: 15px;
 }
-.forecast_item p{
+
+.forecast_item p {
   font-size: 15px;
   margin: 5px 0;
 }
-.forecast_item img{
+
+.forecast_item img {
   width: 50px;
   height: 50px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 768px) {
+  .background {
+    flex-direction: row;
+  }
+
+  .left-part {
+    width: 65%;
+  }
+
+  .right-part {
+    width: 35%;
+  }
+}
+
+@media (max-width: 767px) {
+  .left-part {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .temperature {
+    font-size: 40px;
+  }
+
+  .dt h5 {
+    font-size: 20px;
+  }
+
+  .dt p {
+    font-size: 14px;
+  }
+
+  .weather_desc img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .search_city input {
+    width: 70%;
+  }
+
+  h5 {
+    font-size: 25px;
+  }
+
+  .forecast_item p {
+    font-size: 14px;
+  }
+
+  .forecast_item img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .temperature {
+    font-size: 30px;
+  }
+
+  .dt h5 {
+    font-size: 18px;
+  }
+
+  .dt p {
+    font-size: 12px;
+  }
+
+  .weather_desc img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .search_city input {
+    width: 60%;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  .forecast_item p {
+    font-size: 12px;
+  }
+
+  .forecast_item img {
+    width: 30px;
+    height: 30px;
+  }
 }
