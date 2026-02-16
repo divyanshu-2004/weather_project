@@ -32,7 +32,6 @@ A simple and responsive **Weather Forecast Web App** built with modern web techn
 
 ## 📦 Project Structure
 
-```
 
 weather_project/
 ├── public/                 # Static assets
@@ -45,7 +44,6 @@ weather_project/
 ├── vite.config.js
 └── README.md
 
-````
 
 ---
 
